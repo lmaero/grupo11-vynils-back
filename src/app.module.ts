@@ -50,7 +50,7 @@ import { AlbumMusicianModule } from './albummusician/albummusician.module';
         keepConnectionAlive: true,
         migrations: [__dirname + '/migration/**/*{.ts,.js}'],
         migrationsRun: true,
-        ssl: !!process.env.DATABASE_URL,
+        ssl: { rejectUnauthorized: false },
         // tslint:disable-next-line:max-line-length
     }), RecordLabelModule, PrizeModule, TrackModule, CollectorModule, PerformerModule, BandModule, MusicianModule, AlbumModule, GenreModule, CommentModule, CollectorAlbumModule, AlbumstatusModule, PerformerprizeModule, BandmusicianModule, MusicianAlbumModule, BandAlbumModule, CollectorPerformerModule, AlbumBandModule, AlbumMusicianModule],
 })
