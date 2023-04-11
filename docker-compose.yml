@@ -1,21 +1,22 @@
 version: "3.8"
-   
+
 services:
-  web:
-    build: .
-    command: npm run start
-    volumes:
-      - /usr/src/app
-    environment:
-      DB_HOST: "db"
-    ports:
-      - "3000:3000"
-    depends_on:
-      - db
-    links:
-      - db
-    networks:
-      - default
+  #  web:
+  #    image: node:12-alpine
+  #    command: npm i && npm run start
+  #    working_dir: /usr/src/app
+  #    volumes:
+  #      - ./:/usr/src/app
+  #    environment:
+  #      DB_HOST: "db"
+  #    ports:
+  #      - "3000:3000"
+  #    depends_on:
+  #      - db
+  #    links:
+  #      - db
+  #    networks:
+  #      - default
 
   db:
     image: postgres
